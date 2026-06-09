@@ -4,6 +4,7 @@ __pycache__/
 .env
 .vscode/
 archive/*.h5
+!/archive/my_saved_model.h5
 my_saved_model.h5
 *.ipynb
 .DS_Store
