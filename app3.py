@@ -5,7 +5,8 @@ import os
 from tensorflow.keras.models import load_model
 
 # === Load model ===
-MODEL_PATH = "/Users/pradeepkd/Desktop/projectphase1/archive/my_saved_model.h5"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "archive", "my_saved_model.h5")
 if os.path.exists(MODEL_PATH):
     model = load_model(MODEL_PATH)
     st.success("Model loaded successfully")

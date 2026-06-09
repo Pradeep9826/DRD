@@ -15,5 +15,5 @@ ENV PYTHONUNBUFFERED=1
 # Streamlit default port
 EXPOSE 8501
 
-# Run the Streamlit app by default
-CMD ["streamlit", "run", "app3.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
+# Run the Streamlit app by default using Railway's PORT environment variable
+CMD ["sh", "-c", "streamlit run app3.py --server.port ${PORT:-8501} --server.address 0.0.0.0"]
